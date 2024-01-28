@@ -10,17 +10,23 @@ import {HttpClient} from "@angular/common/http";
 export class AccueilComponent implements OnInit {
 
 
-  employe!: Person;
+  employeAccueil!: Person;
   constructor(private readonly httpClient: HttpClient) {
     this.httpClient.get<Array<Person>>("http://localhost:3000/api/employe").subscribe((listDuPersonnel:Array<Person>) => {
-      this.employe = listDuPersonnel[0];
+      this.employeAccueil = listDuPersonnel[0];
     })
   }
 
   random() {
     this.httpClient.get<Person>("http://localhost:3000/api/employe/random").subscribe((personneRandom:Person) => {
-      this.employe = personneRandom;
+      this.employeAccueil = personneRandom;
     })
+  }
+
+  deleteAccueil(person: Person){
+    this.httpClient.delete("http://localhost:3000/api/employe/:id".replace(':id', person.id!)).subscribe(() => {
+      this.random();
+    });
   }
 
   ngOnInit(): void {

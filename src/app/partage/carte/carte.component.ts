@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Person } from 'src/app/model/Person';
 
 @Component({
@@ -12,7 +12,13 @@ export class CarteComponent implements OnInit {
 
   @Input() employe: Person | undefined;
 
+  @Output('personDelete') deleteCarte$: EventEmitter<any> = new EventEmitter();
+
   ngOnInit(): void {
+  }
+
+  delete() {
+    this.deleteCarte$.emit(this.employe);
   }
 
 }
