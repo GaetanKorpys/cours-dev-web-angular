@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {DrawerComponent} from "../drawer/drawer.component";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +6,6 @@ import {DrawerComponent} from "../drawer/drawer.component";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  // @ViewChild('chartContainer', { read: MatDrawer }) drawer!:MatDrawer;
-  @Input() drawer!: DrawerComponent;
 
   constructor() { }
 

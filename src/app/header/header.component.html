@@ -1,15 +1,12 @@
 <mat-toolbar>
-  <button mat-icon-button (click)="drawer.toggleDrawer()">
+  <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <a [routerLink]="['/']">
+  <a>
     <img id="logo" src="assets/logo.png" alt="Seattle Grace Hospital Logo">
   </a>
 
   <span class="example-spacer"></span>
-
-
-  <langue-bouton></langue-bouton>
 
   <a href="https://www.facebook.com/marc.petitdemange.5" target="_blank">
     <button mat-icon-button>
@@ -34,7 +31,6 @@
       <em class="bi bi-github"></em>
     </button>
   </a>
-
-
-
 </mat-toolbar>
+
+<app-drawer></app-drawer>

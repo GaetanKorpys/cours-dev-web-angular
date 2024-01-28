@@ -7,7 +7,7 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cours-dev-web-angular';
+  title = 'tp-note-gaetan-korpys';
 
 
   constructor(private readonly translate: TranslateService) {

@@ -1,15 +1,21 @@
 import {Component, OnInit} from '@angular/core';
-import {ListPersonnelService, Person} from "../partage/service/list-personnel.service";
+import { Person } from '../model/Person';
 
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.scss']
 })
-export class AccueilComponent implements OnInit {
-  employe: Person = {};
+export class AccueilComponent /**implements OnInit*/ {
+  //employe: Person = {};
+  employe!: Person;
+  //constructor(private readonly listPersonnelService: ListPersonnelService) {}
 
-  constructor(private readonly listPersonnelService: ListPersonnelService) {}
+  random() {}
+    //Completez moi
+
+
+  /**
 
   ngOnInit(): void {
     this.random();
@@ -26,4 +32,6 @@ export class AccueilComponent implements OnInit {
       this.random();
     });
   }
+
+   */
 }
