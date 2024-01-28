@@ -1,31 +1,32 @@
 import {Component, OnInit} from '@angular/core';
 import { Person } from '../model/Person';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.scss']
 })
-export class AccueilComponent /**implements OnInit*/ {
-  //employe: Person = {};
+export class AccueilComponent implements OnInit {
+
+
   employe!: Person;
-  //constructor(private readonly listPersonnelService: ListPersonnelService) {}
-
-  random() {}
-    //Completez moi
-
-
-  /**
-
-  ngOnInit(): void {
-    this.random();
+  constructor(private readonly httpClient: HttpClient) {
+    this.httpClient.get<Array<Person>>("http://localhost:3000/api/employe").subscribe((listDuPersonnel:Array<Person>) => {
+      this.employe = listDuPersonnel[0];
+    })
   }
 
   random() {
-    this.listPersonnelService.fetchRandom().subscribe(employe => {
-      this.employe = employe;
-    });
+    this.httpClient.get<Person>("http://localhost:3000/api/employe/random").subscribe((personneRandom:Person) => {
+      this.employe = personneRandom;
+    })
   }
+
+  ngOnInit(): void {
+  }
+
+  /*
 
   delete(person: Person) {
     this.listPersonnelService.delete(person.id!).subscribe(personnel => {

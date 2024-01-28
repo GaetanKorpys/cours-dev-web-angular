@@ -33,6 +33,9 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { CarteComponent } from './partage/carte/carte.component';
 import { HeaderComponent } from './header/header.component';
 import { DrawerComponent } from './drawer/drawer.component';
+import { ContactComponent } from './contact/contact.component';
+import { GraphComponent } from './graph/graph.component';
+import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -45,6 +48,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarteComponent,
     HeaderComponent,
     DrawerComponent,
+    ContactComponent,
+    GraphComponent,
+    ListPersonnelComponent,
   ],
   imports: [
     BrowserModule,
