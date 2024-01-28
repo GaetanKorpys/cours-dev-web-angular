@@ -1,8 +1,8 @@
 <mat-toolbar>
-  <button mat-icon-button>
+  <button mat-icon-button (click)="drawer.toggleDrawer();">
     <mat-icon>menu</mat-icon>
   </button>
-  <a>
+  <a [routerLink]="['/']">
     <img id="logo" src="assets/logo.png" alt="Seattle Grace Hospital Logo">
   </a>
 
@@ -32,5 +32,3 @@
     </button>
   </a>
 </mat-toolbar>
-
-<app-drawer></app-drawer>
