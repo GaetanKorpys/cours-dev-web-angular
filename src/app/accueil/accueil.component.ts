@@ -11,7 +11,10 @@ import { ListPersonnelService } from '../partage/services/list-personnel-service
 export class AccueilComponent implements OnInit {
 
 
-  employeAccueil!: Person;
+  //employeAccueil!: Person;
+
+  employeAccueil: Person = {};
+  
   constructor(private readonly listPersonnelService:ListPersonnelService) {
     this.random();
   }

@@ -1,9 +1,9 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import {AccueilComponent} from "./accueil/accueil.component";
-import { ContactComponent } from './contact/contact.component';
-import { GraphComponent } from './graph/graph.component';
-import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
+import {ListPersonnelComponent} from "./list-personnel/list-personnel.component";
+import {GraphComponent} from "./graph/graph.component";
+import {ContactComponent} from "./contact/contact.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
@@ -12,7 +12,6 @@ const routes: Routes = [
   {path:'graph', component: GraphComponent},
   {path:'contact', component: ContactComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

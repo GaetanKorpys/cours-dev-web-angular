@@ -1,7 +1,19 @@
 <mat-card class="carteCustom">
   <mat-card-header>
     <img *ngIf="employe?.photo" mat-card-avatar [src]="employe?.photo" alt="Avatar de l'employé"/>
-    <mat-card-title>{{employe?.nom}} {{employe?.prenom}}</mat-card-title>
+    <mat-card-title>{{employe?.nom | uppercase}} {{employe?.prenom}}</mat-card-title>
+    <mat-card-subtitle>
+      <mat-card-content>
+        <mat-chip-list>
+          <mat-chip color="primary" *ngFor="let titre of employe?.titres">
+            <mat-icon class="small">
+              work_outline
+            </mat-icon>
+            {{titre}}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <mat-card-subtitle class="info">
@@ -10,8 +22,7 @@
         href="mailto:{{employe?.email}}"
         title="Send an email to"
         class="truncate"
-      >{{employe?.email}}</a
-      >
+      >{{employe?.email}}</a>
     </mat-card-subtitle>
     <mat-card-subtitle class="info">
       <mat-icon>phone</mat-icon>

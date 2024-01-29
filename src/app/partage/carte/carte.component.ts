@@ -14,11 +14,17 @@ export class CarteComponent implements OnInit {
 
   @Output('personDelete') deleteCarte$: EventEmitter<any> = new EventEmitter();
 
+  @Output('personUpdate') update$: EventEmitter<any> = new EventEmitter();
+
   ngOnInit(): void {
   }
 
   delete() {
     this.deleteCarte$.emit(this.employe);
+  }
+
+  update() {
+    this.update$.emit(this.employe);
   }
 
 }

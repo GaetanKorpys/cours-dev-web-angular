@@ -37,6 +37,8 @@ import { ContactComponent } from './contact/contact.component';
 import { GraphComponent } from './graph/graph.component';
 import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
 import { LangueBoutonComponent } from './langue-bouton/langue-bouton.component';
+import { FormulaireComponent } from './partage/formulaire/formulaire.component';
+import { AjoutPopupComponent } from './list-personnel/ajout-popup/ajout-popup.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -53,6 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     GraphComponent,
     ListPersonnelComponent,
     LangueBoutonComponent,
+    FormulaireComponent,
+    AjoutPopupComponent,
   ],
   imports: [
     BrowserModule,
