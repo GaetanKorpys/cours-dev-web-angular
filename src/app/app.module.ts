@@ -36,6 +36,7 @@ import { DrawerComponent } from './drawer/drawer.component';
 import { ContactComponent } from './contact/contact.component';
 import { GraphComponent } from './graph/graph.component';
 import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
+import { LangueBoutonComponent } from './langue-bouton/langue-bouton.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -51,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     GraphComponent,
     ListPersonnelComponent,
+    LangueBoutonComponent,
   ],
   imports: [
     BrowserModule,
